@@ -1,6 +1,10 @@
 #include "stm32f10x.h"                  // Device header
 #include "Ultersound.h"
 #include "Delay.h"
+#include <stm32f10x_rcc.h>
+#include <stm32f10x_gpio.h>
+#include <stm32f10x_tim.h>
+#include <misc.h>
 
 uint8_t  Echo_State = 0;    
 uint16_t High_Time = 0;      
@@ -17,12 +21,12 @@ void Ultrasound_Init(void){
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12 ;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
-	GPIO_ResetBits(GPIOB, GPIO_Pin_12);
+	GPIO_ResetBits(GPIOB, GPIO_Pin_15);
 	
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_14;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
+	GPIO_Init(GPIOB, &GPIO_InitStructure);
 	
 	TIM_InternalClockConfig(TIM2);
 	

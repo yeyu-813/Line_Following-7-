@@ -803,6 +803,16 @@
               <FileType>5</FileType>
               <FilePath>.\hardware\Infrared.h</FilePath>
             </File>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>ADC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\ADC.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
